@@ -130,6 +130,8 @@
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="75%"
                       ></div>
                     </div>
                   </div>
@@ -151,6 +153,8 @@
                         aria-valuenow="100"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="100%"
                       ></div>
                     </div>
                   </div>
@@ -172,6 +176,8 @@
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="75%"
                       ></div>
                     </div>
                   </div>
@@ -193,6 +199,8 @@
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="75%"
                       ></div>
                     </div>
                   </div>
@@ -214,6 +222,8 @@
                         aria-valuenow="50"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="50%"
                       ></div>
                     </div>
                   </div>
@@ -247,6 +257,8 @@
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="75%"
                       ></div>
                     </div>
                   </div>
@@ -268,6 +280,8 @@
                         aria-valuenow="100"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="100%"
                       ></div>
                     </div>
                   </div>
@@ -289,6 +303,8 @@
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="75%"
                       ></div>
                     </div>
                   </div>
@@ -310,6 +326,8 @@
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="75%"
                       ></div>
                     </div>
                   </div>
@@ -331,6 +349,8 @@
                         aria-valuenow="50"
                         aria-valuemin="0"
                         aria-valuemax="100"
+                        data-bs-toggle="tooltip"
+                        title="50%"
                       ></div>
                     </div>
                   </div>
@@ -421,7 +441,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="container mb-4">
         <div
           id="carouselExampleControls"
           class="carousel slide"
@@ -429,13 +449,25 @@
         >
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-              <img src="https://picsum.photos/300/150?random=5" class="d-block w-100" alt="..." />
+              <img
+                src="https://picsum.photos/300/150?random=5"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-              <img src="https://picsum.photos/300/150?random=6" class="d-block w-100" alt="..." />
+              <img
+                src="https://picsum.photos/300/150?random=6"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item" data-bs-interval="1000">
-              <img src="https://picsum.photos/300/150?random=7" class="d-block w-100" alt="..." />
+              <img
+                src="https://picsum.photos/300/150?random=7"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
           </div>
         </div>
@@ -448,18 +480,93 @@
             <h3 class="fw-light">Allons en discuter autour d'un café</h3>
           </div>
 
-          <div class="row mt-3 g-3">
+          <div class="row mt-3 g-3 align-items-center">
             <div class="col-md-5">
               <img src="img/grab-a-coffee.jpg" class="w-100" alt="" />
             </div>
 
             <div class="offset-md-1 col-md-6">
-              <div class="h-100 bg-secondary"></div>
+              <form action="#">
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="prenoms" class="form-label">Prénoms</label>
+                    <input
+                      type="text"
+                      name=""
+                      class="form-control"
+                      id="prenoms"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" name="" class="form-control" id="nom" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Adresse Email</label>
+                  <input type="email" name="" class="form-control" id="email" />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    name=""
+                    rows="5"
+                    class="form-control"
+                    id=""
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Soumettre
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <div
+      class="modal fade"
+      id="modalContainer"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Mentions Légales
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            excepturi perspiciatis impedit asperiores assumenda adipisci
+            mollitia ducimus aperiam, earum blanditiis cum dolor ex. Mollitia
+            animi, doloremque eligendi vero illo corporis! Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Officia architecto nulla dolor
+            obcaecati modi! Beatae laudantium cupiditate suscipit? Qui et dolore
+            totam porro dolores velit, ea possimus error voluptatem voluptatum?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fermer
+            </button>
+            <button type="button" class="btn btn-primary">J'ai compris</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="container py-4">
@@ -473,11 +580,15 @@
             </a>
           </div>
           <div class="col-md-4 col-sm-6 text-center">
-            <a href="#" class="text-decoration-none text-dark"
+            <a
+              href="#"
+              class="text-decoration-none text-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#modalContainer"
               >Mentions Légales</a
             >
           </div>
-          <div class="col-md-4 text-end">
+          <div class="col-md-4 text-center text-md-end">
             <i class="fab fa-linkedin fa-3x"></i>
             <i class="fab fa-instagram fa-3x"></i>
             <i class="fab fa-twitter fa-3x"></i>
@@ -492,4 +603,13 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"
   ></script>
+
+  <script>
+    const tooltipTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'
+    );
+    const tooltipList = [...tooltipTriggerList].map(
+      (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+  </script>
 </html>
